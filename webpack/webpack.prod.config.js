@@ -1,13 +1,13 @@
 const path = require('path');
 const webpack = require('webpack');
 const config = require('webpack-config');
+const etp = require('extract-text-webpack-plugin');
 
 
 module.exports = new config.default().merge({
   output: {
-    filename: 'js/[name]-[hash].js',
+    filename: 'js/[name].js',
     path: path.resolve(__dirname, "..", 'dist'),
-    publicPath: '/',
   },
 
   module: {
@@ -16,10 +16,41 @@ module.exports = new config.default().merge({
         loader: 'babel-loader',
         exclude: [
           /node_modules/,
+          path.resolve(__dirname, 'src/vendors/'),
         ],
         query: {
-          presets: ['es2015']
+          presets: ['es2015', 'stage-0']
         }
+      },
+      {
+        test: /\.css/,
+        use: etp.extract({
+          fallback: 'style-loader',
+          use: [{
+            loader: 'css-loader',
+            options: {
+              importLoaders: 2,
+              sourceMap: false,
+              minimize: true
+            },
+          }, ],
+        })
+      },
+      {
+        test: /\.styl$/,
+        use: etp.extract({
+          fallback: 'style-loader',
+          use: [{
+              loader: 'css-loader',
+              options: {
+                importLoaders: 2,
+                sourceMap: false,
+                minimize: true
+              },
+            },
+            'stylus-loader',
+          ],
+        }),
       },
       {
         test: /\.pug$/,
@@ -27,6 +58,10 @@ module.exports = new config.default().merge({
         options: {
           pretty: false
         }
+      },
+      {
+        test: /\.(png|jpg|svg|ttf|eot|woff|woff2)$/,
+        loader: 'file-loader?name=[path][name].[ext]'
       }
     ]
   },
@@ -42,8 +77,9 @@ module.exports = new config.default().merge({
         warnings: false
       }
     }),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: "common"
-    }) 
+    new etp({
+      filename: "css/[name].css",
+      allChunks: true
+    }),
   ],
 })
