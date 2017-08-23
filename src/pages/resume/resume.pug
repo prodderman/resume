@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+include ../../components/layout/layout
+include ../../components/personal/personal
+
+doctype html
 html(lang="en")
   head
     meta(charset="UTF-8")
@@ -6,3 +9,9 @@ html(lang="en")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     title resume
   body
+    +container()
+      +container__main()
+        +container__col-left()
+          +personal("name here", "surname", "graphic designer")
+        +container__col-right()
+         
