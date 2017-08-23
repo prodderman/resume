@@ -1,6 +1,7 @@
 include ../../components/layout/layout
 include ../../components/personal/personal
 include ../../components/section/section
+include ../../components/contact/contact
 
 doctype html
 html(lang="en")
@@ -31,7 +32,10 @@ html(lang="en")
               nulla ut metus varius laoreet. Quisque rutrum.</strong>
 
           +section("contact")
-
+            +contact({title: "Address", text: "Main Street, City."})
+            +contact({title: "E-mail", text: "contact@domain.com", type: "email"})
+            +contact({title: "Phone", text: "555-555-555", type: "phone"})
+            +contact({title: "Website", text: "www.yourweb.com", type: "link"})
           +section("skills")
 
         +container__col-right()

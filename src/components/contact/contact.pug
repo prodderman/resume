@@ -1,0 +1,19 @@
+mixin contact(object)
+  case object.type
+    when "email"
+      a.contact(href= `mailto: ${object.text}`)
+        .contact__title= object.title
+        .contact__text= object.text
+    when "phone"
+      a.contact(href= `tel:${object.text}`)
+        .contact__title= object.title
+        .contact__text= object.text
+    when "link"
+      a.contact(href= object.text)
+        .contact__title= object.title
+        .contact__text= object.text
+    default
+      .contact
+        .contact__title= object.title
+        .contact__text= object.text
+    
