@@ -1,0 +1,10 @@
+include ../round/round
+
+mixin section(title)
+  section(class= `section section--${title}`)
+    .section__header
+      .section__icon-wrap
+        +round("section__icon")
+      .section__title= title
+    .section__content
+      block

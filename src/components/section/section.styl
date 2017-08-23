@@ -1,0 +1,54 @@
+@import '~global/vars.styl';
+
+.section
+  margin-bottom: 50px
+
+  &__header
+    display: flex;
+    align-items: center;
+
+    &:after
+      flex 1
+      content: ""
+      height: 5px
+      background-color: $color_blue
+
+  &__icon-wrap
+    width: 75px
+    height: 75px;
+
+  &__icon .icon-inner
+    background-size: 55%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+  &__title
+    font-family: MyriadPro
+    font-weight: bold
+    font-size: 41px
+    color: $color_blue
+    text-transform: uppercase
+    margin-left: 8px
+    margin-right: 6px
+    letter-spacing: 0
+
+  &--profile .icon-inner
+    background-image: url(./img/profile.png)
+
+  &--contact .icon-inner
+    background-image: url(./img/contact.png)
+    background-size: 60%;
+
+  &--skills .icon-inner
+    background-image: url(./img/skill.png)
+    background-size: 70%;
+  
+  &--education .icon-inner
+    background-image: url(./img/education.png)
+    background-size: 80%;
+
+  &--experience .icon-inner
+    background-image: url(./img/experience.png)
+
+  &--software .icon-inner
+    background-image: url(./img/software.png)
