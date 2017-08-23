@@ -1,0 +1,30 @@
+@import '~global/vars.styl';
+
+.skill
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-around
+  margin-bottom: 20px
+
+  &__title
+    font-size: 25px
+    text-transform: uppercase
+    color: black
+    margin-bottom: 10px
+    width: 100%
+    text-align: center
+
+  &__range
+    display: flex
+    justify-content: space-around
+    align-items: center
+    width: 80%
+
+  &__point
+    width: 18px
+    height: 18px
+    border-radius: 50%
+    background-color: $color_gray
+
+    &--check
+      background-color: $color_blue

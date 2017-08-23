@@ -2,6 +2,7 @@ include ../../components/layout/layout
 include ../../components/personal/personal
 include ../../components/section/section
 include ../../components/contact/contact
+include ../../components/skill/skill
 
 doctype html
 html(lang="en")
@@ -37,6 +38,10 @@ html(lang="en")
             +contact({title: "Phone", text: "555-555-555", type: "phone"})
             +contact({title: "Website", text: "www.yourweb.com", type: "link"})
           +section("skills")
+            +skill("creative", 9)
+            +skill("teamwork", 11)
+            +skill("innovate", 7)
+            +skill("communication", 11)
 
         +container__col-right()
           +section("education") 

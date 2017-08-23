@@ -1,0 +1,9 @@
+mixin skill(title, range)
+  .skill
+    .skill__title= title
+    .skill__range
+      - for(var i = 0; i < 12; i++)
+        if i < range
+          .skill__point.skill__point--check
+        else 
+          .skill__point
