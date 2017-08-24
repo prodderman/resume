@@ -7,6 +7,7 @@ const etp = require('extract-text-webpack-plugin');
 module.exports = new config.default().merge({
   output: {
     filename: 'js/[name].js',
+    publicPath: "",
     path: path.resolve(__dirname, "..", 'dist'),
   },
 
@@ -26,12 +27,13 @@ module.exports = new config.default().merge({
         test: /\.css/,
         use: etp.extract({
           fallback: 'style-loader',
+          publicPath: "../",
           use: [{
             loader: 'css-loader',
             options: {
               importLoaders: 2,
               sourceMap: false,
-              minimize: true
+              minimize: true,
             },
           }, ],
         })
@@ -40,6 +42,7 @@ module.exports = new config.default().merge({
         test: /\.styl$/,
         use: etp.extract({
           fallback: 'style-loader',
+          publicPath: "../",
           use: [{
               loader: 'css-loader',
               options: {
@@ -60,8 +63,18 @@ module.exports = new config.default().merge({
         }
       },
       {
-        test: /\.(png|jpg|svg|ttf|eot|woff|woff2)$/,
-        loader: 'file-loader?name=[path][name].[ext]'
+        test: /\.(png|jpg|svg)$/,
+        loader: 'file-loader',
+        options: {
+          name: "img/[name].[ext]"
+        }
+      },
+      {
+        test: /\.(svg|otf|ttf|eot|woff|woff2)$/,
+        loader: 'file-loader',
+        options: {
+          name: "font/[name]/[name].[ext]"
+        }
       }
     ]
   },

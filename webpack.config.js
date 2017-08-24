@@ -8,7 +8,7 @@ const pages = [];
 
 const paths = {
   pages: path.resolve(__dirname, 'src', 'pages'),
-  dist: path.resolve(__dirname, 'dist'),
+  dist: path.resolve(__dirname, "..", 'dist'),
 };
 
 fs
@@ -21,7 +21,6 @@ const htmls = pages.map(fileName => new hwp({
   filename: `${fileName}.html`,
   chunks: [`${fileName}`, 'common'],
   template: `./src/pages/${fileName}/${fileName}.pug`,
-  alwaysWriteToDisk: true,
 }));
 
 const entries = pages.reduce((entry, fileName) => {
