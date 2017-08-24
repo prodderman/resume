@@ -7,3 +7,4 @@ import section from '../../components/section/section';
 import contact from '../../components/contact/contact';
 import skill from '../../components/skill/skill';
 import software from '../../components/software/software';
+import list from '../../components/list/list';

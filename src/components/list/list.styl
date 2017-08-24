@@ -1,0 +1,45 @@
+.list
+  padding-left: 53px
+
+  &-item
+    position relative
+    display: block
+    font-size: 65px
+    margin-bottom: 13px
+
+    &:after
+      position absolute
+      content: ""
+      width: 20px
+      height 20px
+      top: 6px
+      left: -41px
+      border-radius: 50%
+      background-color: black
+
+    &__header
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      width: 100%;
+      padding-left: 0;
+      margin-bottom: 8px
+
+    &__title
+      font-weight: bold
+      font-size: 25px
+      letter-spacing: 0.3px
+      color black
+      text-transform: uppercase
+      flex 1.2
+      margin-bottom: 5px
+
+    &__date
+      font-size: 25px
+      color black
+      flex 2.2
+    
+    &__place
+      font-size: 25px
+      color black
+      width: 100%

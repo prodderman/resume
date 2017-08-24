@@ -4,6 +4,7 @@ include ../../components/section/section
 include ../../components/contact/contact
 include ../../components/skill/skill
 include ../../components/software/software
+include ../../components/list/list
 
 doctype html
 html(lang="en")
@@ -46,9 +47,35 @@ html(lang="en")
 
         +container__col-right()
           +section("education") 
-
+            +list("education__list")
+              +list-item("master degree", "Feb 2011 - Jun 2014", "UNIVERSITY NAME")
+                p.education__text.
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
+              +list-item("master degree", "Feb 2011 - Jun 2014", "UNIVERSITY NAME")
+                p.education__text.
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
+              +list-item("master degree", "Feb 2011 - Jun 2014", "UNIVERSITY NAME")
+                p.education__text.
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
+              +list-item("master degree", "Feb 2011 - Jun 2014", "UNIVERSITY NAME")
+                p.education__text.
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
+            
           +section("experience")
-
+            +list("experience__list")
+              +list-item("COMPANY NAME", "Feb 2011 - Jun 2014", "YOUR JOB HERE")
+                p.experience__text.
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
+              +list-item("COMPANY NAME", "Feb 2011 - Jun 2014", "YOUR JOB HERE")
+                p.experience__text.
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
+              +list-item("COMPANY NAME", "Feb 2011 - Jun 2014", "YOUR JOB HERE")
+                p.experience__text.
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
+              +list-item("COMPANY NAME", "Feb 2011 - Jun 2014", "YOUR JOB HERE")
+                p.experience__text.
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
+         
           +section("software")
             +software("photoshop", 90)
             +software("dreamweawer", 85)
