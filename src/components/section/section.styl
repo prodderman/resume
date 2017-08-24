@@ -16,9 +16,16 @@
       margin-top: 2px
       background-color: $color_blue
 
+      @media (max-width: 380px)
+        display: none
+
   &__icon-wrap
     width: 75px
     height: 75px;
+  
+    @media (max-width: 380px)
+      width: 60px
+      height: 60px
 
   &__icon .icon-inner
     background-size: 55%;
@@ -34,6 +41,9 @@
     margin-left: 8px
     margin-right: 8px
     letter-spacing: 0
+
+    @media (max-width: 380px)
+      font-size: 36px
 
   &--profile .icon-inner
     background-image: url(./img/profile.png)

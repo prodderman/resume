@@ -1,13 +1,16 @@
 .list
   padding-left: 53px
 
+  @media (max-width: 320px)
+    padding-left: 0
+
   &-item
     position relative
     display: block
     font-size: 65px
-    margin-bottom: 13px
+    margin-bottom: 15px
 
-    &:after
+    &:before
       position absolute
       content: ""
       width: 20px
@@ -16,6 +19,9 @@
       left: -41px
       border-radius: 50%
       background-color: black
+
+      @media (max-width: 320px)
+        display: none
 
     &__header
       display: flex
@@ -34,10 +40,30 @@
       flex 1.2
       margin-bottom: 5px
 
+      @media (max-width: 991px)
+        flex 1.6
+
+      @media (max-width: 575px)
+        width: 100%
+        flex none
+
     &__date
       font-size: 25px
       color black
       flex 2.2
+      margin-bottom: 5px;
+
+      &:before
+        content: "// "
+        font-family: MyriadPro
+        font-size: 25px
+
+        @media (max-width: 575px)
+          display: none
+
+      @media (max-width: 575px)
+        width: 100%
+        flex none
     
     &__place
       font-size: 25px
