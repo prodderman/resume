@@ -9,7 +9,7 @@ mixin contact(object)
         .contact__title= object.title
         .contact__text= object.text
     when "link"
-      a.contact(href= object.text)
+      a(target="_blank" rel="noopener noreferrer").contact(href= `https://${object.text}`)
         .contact__title= object.title
         .contact__text= object.text
     default
