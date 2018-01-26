@@ -1,12 +1,9 @@
-- var _className = ""
-
 mixin list(className = "")
-  - _className = className
-  ul(class= `list ${_className}`)
+  ul(class= `list ${className}`)
     block
 
-mixin list-item(title, date, place)
-  li(class= `list-item ${_className}-item`)
+mixin list-item(classname = "", title, date, place)
+  li(class= `list-item ${classname}-item`)
     .list-item__header
       .list-item__title= title
       .list-item__date= `${date}`
