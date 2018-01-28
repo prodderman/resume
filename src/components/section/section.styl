@@ -1,7 +1,6 @@
 @import '~global/vars.styl';
 
 .section
-  margin-bottom: 50px
 
   &__header
     display: flex;
@@ -44,24 +43,40 @@
     @media (max-width: 380px)
       font-size: 36px
 
-  &--profile .icon-inner
-    background-image: url(./img/profile.png)
+  &--profile 
+    .icon-inner
+      background-image: url(./img/profile.png)
 
-  &--contact .icon-inner
-    background-image: url(./img/contact.png)
-    background-size: 60%;
+  &--contact 
+    .icon-inner
+      background-image: url(./img/contact.png)
+      background-size: 60%;
 
-  &--skills .icon-inner
-    background-image: url(./img/skill.png)
-    background-size: 70%;
+  &--skills 
+    .icon-inner
+      background-image: url(./img/skill.png)
+      background-size: 70%;
+
+    .skill
+      margin-bottom: 1rem
   
-  &--education .icon-inner
-    background-image: url(./img/education.png)
-    background-size: 80%;
+  &--education 
+    .icon-inner
+      background-image: url(./img/education.png)
+      background-size: 80%;
 
-  &--experience .icon-inner
-    background-image: url(./img/experience.png)
+  &--experience 
+    .icon-inner
+      background-image: url(./img/experience.png)
 
-  &--software .icon-inner
-    background-image: url(./img/software.png)
-    background-size: 70%;
+  &--software 
+    .icon-inner
+      background-image: url(./img/software.png)
+      background-size: 70%;
+
+    .software
+      width: 45%
+      margin-bottom: 20px
+      
+      @media (max-width: 480px)
+        width: 100%
