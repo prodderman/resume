@@ -1,10 +1,10 @@
 include ../round/round
 
-mixin section(title)
+mixin section(title, img, alt="")
   section(class= `section section--${title}`)
     .section__header
       .section__icon-wrap
-        +round("section__icon")
+        +round("section__icon", img, alt)
       .section__title= title
     .section__content
       block

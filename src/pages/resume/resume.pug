@@ -20,7 +20,7 @@ html(lang="en")
       +container__main()
         +container__col-left()
           +personal("Константин", "Константинов", "graphic designer")
-          +section("profile")
+          +section("profile", "profile.png", "profile")
             p.
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
               Aenean commodo ligula eget dolor. Aenean massa. Cum sociis 
@@ -36,19 +36,19 @@ html(lang="en")
               dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra 
               nulla ut metus varius laoreet. Quisque rutrum.</strong>
 
-          +section("contact")
+          +section("contact", "contact.png", "contacts")
             +contact({title: "Address", text: "Main Street, City."})
             +contact({title: "E-mail", text: "contact@domain.com", type: "email"})
             +contact({title: "Phone", text: "555-555-555", type: "phone"})
             +contact({title: "Website", text: "www.yourweb.com", type: "link"})
-          +section("skills")
+          +section("skills", "skill.png", "skills")
             +skill("creative", 9)
             +skill("teamwork", 11)
             +skill("innovate", 7)
             +skill("communication", 11)
 
         +container__col-right()
-          +section("education") 
+          +section("education", "education.png", "education") 
             +list("education__list")
               +list-item("education__list", "master degree", "Feb 2011 - Jun 2014", "UNIVERSITY NAME")
                 p.education__text.
@@ -63,7 +63,7 @@ html(lang="en")
                 p.education__text.
                   Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
             
-          +section("experience")
+          +section("experience", "experience.png", "experience")
             +list("experience__list")
               +list-item("experience__list","COMPANY NAME", "Feb 2011 - Jun 2014", "YOUR JOB HERE")
                 p.experience__text.
@@ -75,7 +75,7 @@ html(lang="en")
                 p.experience__text.
                   Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
          
-          +section("software")
+          +section("software", "software.png", "software")
             +software("photoshop", 90)
             +software("dreamweawer", 85)
             +software("illustrator", 70)

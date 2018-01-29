@@ -3,8 +3,6 @@ mixin personal(name, surname, prof, img)
   .personal
     .personal__avatar
       +round("personal__icon")
-        if img
-          img(src=require(`./img/${img}`), alt="avatar")
     .personale__info
       .personal__name= name
       .personal__surname= surname
