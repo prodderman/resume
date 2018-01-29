@@ -1,7 +1,7 @@
 include ../round/round
 
 mixin section(title, img, alt="")
-  section(class= `section section--${title}`)
+  section(class= `section section-${title}`)
     .section__header
       .section__icon-wrap
         +round("section__icon", img, alt)
