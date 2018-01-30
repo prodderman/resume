@@ -41,19 +41,29 @@
 
   &-contact
 
-    .contact
-      margin-bottom: 1.4rem
+    .section__content
+      
+      & > *
+        margin-bottom: 1.4rem
 
   &-skills 
 
-    .skill
-      margin-bottom: 1rem
+    .section__content
+      
+      & > *
+        margin-bottom: 1rem
 
   &-software 
 
-    .software
-      width: 45%
-      margin-bottom: 1.25rem
+    .section__content
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      width: 100%
+
+      & > *
+        width: 45%
+        margin-bottom: 1.25rem
       
-      @media (max-width: 480px)
-        width: 100%
+        @media (max-width: 480px)
+          width: 100%

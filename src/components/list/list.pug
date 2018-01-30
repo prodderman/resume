@@ -2,8 +2,10 @@ mixin list(className = "")
   ul(class= `list ${className}`)
     block
 
-mixin list-item(classname = "", title, date, place)
-  li(class= `list-item ${classname}-item`)
+mixin list-item(classname = "", title, date, place, altColor = false)
+  -  let classes = ''
+  -  classes += altColor ? ` list-item_altcolor` : ''
+  li(class= `list-item ${classname}-item ${classes}`)
     .list-item__header
       .list-item__title= title
       .list-item__date= `${date}`
