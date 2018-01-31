@@ -21,6 +21,7 @@ const htmls = pages.map(fileName => new hwp({
   filename: `${fileName}.html`,
   chunks: [`${fileName}`, 'common'],
   template: `./src/pages/${fileName}/${fileName}.pug`,
+  favicon: './src/global/favicon.png'
 }));
 
 const entries = pages.reduce((entry, fileName) => {
