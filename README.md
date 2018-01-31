@@ -16,7 +16,7 @@ npm run dev
 
 [localhost](http://localhost:8080/)
 
-## Producion build
+## Production build
 
 ```commandline
 npm run prod
