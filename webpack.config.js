@@ -3,6 +3,8 @@ const fs = require('fs');
 const webpack = require('webpack');
 const hwp = require('html-webpack-plugin');
 const config = require('webpack-config');
+const CleanPlugin = require('clean-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 const pages = [];
 
@@ -20,8 +22,7 @@ fs
 const htmls = pages.map(fileName => new hwp({
   filename: `${fileName}.html`,
   chunks: [`${fileName}`, 'common'],
-  template: `./src/pages/${fileName}/${fileName}.pug`,
-  favicon: './src/global/favicon.png'
+  template: `./src/pages/${fileName}/${fileName}.pug`
 }));
 
 const entries = pages.reduce((entry, fileName) => {
@@ -51,7 +52,9 @@ module.exports = new config.default().merge({
   },
 
   plugins: [
+    new CleanPlugin(['./dist']),
     new webpack.ProgressPlugin(),
+    new FaviconsWebpackPlugin('./src/global/favicon.png'),
     new webpack.ProvidePlugin({
       $: 'jquery'
     }),
