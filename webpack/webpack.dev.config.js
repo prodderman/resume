@@ -51,7 +51,7 @@ module.exports = new config.default().merge({
         }
       },
       {
-        test: /\.(png|jpg|svg|ttf|eot|woff|woff2)$/,
+        test: /\.(png|jpg|svg|ttf|eot|woff|woff2|xml|json|webmanifest)$/,
         loader: 'file-loader?name=[path][name].[ext]'
       }
     ]

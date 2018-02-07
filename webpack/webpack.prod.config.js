@@ -63,7 +63,21 @@ module.exports = new config.default().merge({
         }
       },
       {
+        test: /\.(svg|png|ico|xml|json|webmanifest)$/,
+        loader: 'file-loader',
+        include: [
+          path.resolve(__dirname, '..', 'src/global/favicons')
+        ],
+        options: {
+          name: 'favicons/[name].[ext]'
+        }
+      },
+      {
         test: /\.(png|jpg|svg)$/,
+        exclude: [
+          /fonts/,
+          path.resolve(__dirname, 'src/global/favicons')
+        ],
         loader: 'file-loader',
         options: {
           name: "img/[name].[ext]"
@@ -72,10 +86,15 @@ module.exports = new config.default().merge({
       {
         test: /\.(svg|otf|ttf|eot|woff|woff2)$/,
         loader: 'file-loader',
+        exclude: [
+          /node_modules/,
+          /img/,
+          path.resolve(__dirname, 'src/global/favicons')
+        ],
         options: {
           name: "font/[name]/[name].[ext]"
         }
-      }
+      },
     ]
   },
 
