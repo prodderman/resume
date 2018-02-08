@@ -1,5 +1,5 @@
-mixin round(className = "", img, alt = "")
-  div(class= `${className} icon`)
-    div(class= `icon-inner`)
+mixin round(img, alt = "")
+  div(class= `icon`)
+    div(class= `icon__inner`)
        if img
           img(src=require(`./img/${img}`), alt = alt)

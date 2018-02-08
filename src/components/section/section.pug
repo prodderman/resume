@@ -3,8 +3,8 @@ include ../round/round
 mixin section(title, img, alt="")
   section(class= `section section_${title}`)
     .section__header
-      .section__icon-wrap
-        +round("section__icon", img, alt)
+      .section__icon
+        +round(img, alt)
       .section__title= title
     .section__content
       block
