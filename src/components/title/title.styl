@@ -1,0 +1,37 @@
+@import '~global/vars.styl'
+
+.title
+  display flex
+  align-items center
+  width 100%
+
+  &:after
+    flex 1
+    content ""
+    height 0.31rem
+    margin-bottom 0.45rem
+    background-color $color_blue
+
+    @media (max-width 380px)
+      display none
+
+  &__icon
+    width 4.7rem
+    height 4.7rem
+  
+    @media (max-width 380px)
+      width 3.75rem
+      height 3.75rem
+
+  &__text
+    font-family MyriadPro
+    font-weight bold
+    font-size 2.56rem
+    color $color_blue
+    text-transform uppercase
+    margin-left 0.5rem
+    margin-right 0.5rem
+    letter-spacing 0
+
+    @media (max-width 380px)
+      font-size 2.25rem

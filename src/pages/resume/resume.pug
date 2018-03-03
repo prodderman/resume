@@ -1,6 +1,6 @@
 include ../../components/layout/layout
 include ../../components/personal/personal
-include ../../components/section/section
+include ../../components/title/title
 include ../../components/contact/contact
 include ../../components/skill/skill
 include ../../components/software/software
@@ -26,59 +26,93 @@ html(lang="en")
     +container("resume")
       +container__main()
         +container__col-left()
-          +personal("Константин", "Константинов", "graphic designer")
-          +section("profile", "profile.png", "profile")
-            p.
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-              Aenean commodo ligula eget dolor. Aenean massa. Cum sociis 
-              natoque penatibus et magnis dis parturient montes, nascetur 
-              ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, 
-              pretium quis, sem. Nulla consequat massa quis enim. Donec 
-              pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim 
-              justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam 
-              dictum felis eu <strong>pede mollis pretium. Integer tincidunt. Cras 
-              dapibus. Vivamus elementum semper nisi. Aenean 
-              vulputate eleifend tellus. Aenean leo ligula, porttitor eu, 
-              consequat vitae, eleifend ac, enim. Aliquam lorem ante, 
-              dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra 
-              nulla ut metus varius laoreet. Quisque rutrum.</strong>
+          .resume__personal
+            +personal("Константин", "Константинов", "graphic designer")
+          section.resume__section
+            .resume__section-header
+              +title({text: "profile", img: "profile.png", alt: "profile"})
+            .resume__section-content
+              p.
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+                Aenean commodo ligula eget dolor. Aenean massa. Cum sociis 
+                natoque penatibus et magnis dis parturient montes, nascetur 
+                ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, 
+                pretium quis, sem. Nulla consequat massa quis enim. Donec 
+                pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim 
+                justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam 
+                dictum felis eu <strong>pede mollis pretium. Integer tincidunt. Cras 
+                dapibus. Vivamus elementum semper nisi. Aenean 
+                vulputate eleifend tellus. Aenean leo ligula, porttitor eu, 
+                consequat vitae, eleifend ac, enim. Aliquam lorem ante, 
+                dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra 
+                nulla ut metus varius laoreet. Quisque rutrum.</strong>
 
-          +section("contact", "contact.png", "contacts")
-            +contact({title: "Address", text: "Main Street, City."})
-            +contact({title: "E-mail", text: "contact@domain.com", type: "email"})
-            +contact({title: "Phone", text: "555-555-555", type: "phone"})
-            +contact({title: "Website", text: "www.yourweb.com", type: "link"})
-          +section("skills", "skill.png", "skills")
-            +skill("creative", 9)
-            +skill("teamwork", 11)
-            +skill("innovate", 7)
-            +skill("communication", 11)
+          section.resume__section
+            .resume__section-header
+              +title({text: "contact", img: "contact.png", alt: "contacts"})
+            .resume__section-content
+              .resume__contact
+                +contact({title: "Address", text: "Main Street, City."})
+              .resume__contact
+                +contact({title: "E-mail", text: "contact@domain.com", type: "email"})
+              .resume__contact
+                +contact({title: "Phone", text: "555-555-555", type: "phone"})
+              .resume__contact
+                +contact({title: "Website", text: "www.yourweb.com", type: "link"})
+          section.resume__section
+            .resume__section-header
+              +title({text: "skills", img: "skill.png", alt: "skills"})
+            .resume__section-content
+              .resume__skill
+                +skill("creative", 9)
+              .resume__skill
+                +skill("teamwork", 11)
+              .resume__skill
+                +skill("innovate", 7)
+              .resume__skill
+                +skill("communication", 11)
 
         +container__col-right()
-          +section("education", "education.png", "education") 
-            +list()
-              +list-item("master degree", "Feb 2011 - Jun 2014", "UNIVERSITY NAME", true)
-                | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
-              +list-item("master degree", "Feb 2011 - Jun 2014", "UNIVERSITY NAME", true)
-                | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
-              +list-item("master degree", "Feb 2011 - Jun 2014", "UNIVERSITY NAME", true)
-                | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
-              +list-item("master degree", "Feb 2011 - Jun 2014", "UNIVERSITY NAME", true)
-                | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
+          section.resume__section
+            .resume__section-header
+              +title({text: "education", img: "education.png", alt: "education"}) 
+            .resume__section-content
+              +list()
+                +list-item("master degree", "Feb 2011 - Jun 2014", "UNIVERSITY NAME", true)
+                  | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
+                +list-item("master degree", "Feb 2011 - Jun 2014", "UNIVERSITY NAME", true)
+                  | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
+                +list-item("master degree", "Feb 2011 - Jun 2014", "UNIVERSITY NAME", true)
+                  | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
+                +list-item("master degree", "Feb 2011 - Jun 2014", "UNIVERSITY NAME", true)
+                  | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
             
-          +section("experience", "experience.png", "experience")
-            +list()
-              +list-item("COMPANY NAME", "Feb 2011 - Jun 2014", "YOUR JOB HERE")
-                | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
-              +list-item( "COMPANY NAME", "Feb 2011 - Jun 2014", "YOUR JOB HERE")
-                | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
-              +list-item( "COMPANY NAME", "Feb 2011 - Jun 2014", "YOUR JOB HERE")
-                | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
+          section.resume__section
+            .resume__section-header
+              +title({text: "experience", img: "experience.png", alt: "experience"})
+            .resume__section-content
+              +list()
+                +list-item("COMPANY NAME", "Feb 2011 - Jun 2014", "YOUR JOB HERE")
+                  | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
+                +list-item( "COMPANY NAME", "Feb 2011 - Jun 2014", "YOUR JOB HERE")
+                  | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
+                +list-item( "COMPANY NAME", "Feb 2011 - Jun 2014", "YOUR JOB HERE")
+                  | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
          
-          +section("software", "software.png", "software")
-            +software("photoshop", 90)
-            +software("dreamweawer", 85)
-            +software("illustrator", 70)
-            +software("after effects", 60)
-            +software("indesign", 50)
-            +software("html&css", 90)
+          section.resume__section
+            .resume__section-header
+              +title({text: "software", img: "software.png", alt: "software"})
+            .resume__section-content
+              .resume__software-container
+                .resume__software
+                  +software("photoshop", 90)
+                .resume__software
+                  +software("dreamweawer", 85)
+                .resume__software
+                  +software("illustrator", 70)
+                .resume__software
+                  +software("after effects", 60)
+                .resume__software
+                  +software("indesign", 50)
+                .resume__software
+                  +software("html&css", 90)

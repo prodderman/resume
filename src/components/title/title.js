@@ -1,2 +1,2 @@
-import "./section.styl";
+import "./title.styl";
 import round from '../round/round';

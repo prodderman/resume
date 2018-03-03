@@ -1,0 +1,7 @@
+include ../round/round
+
+mixin title({text, img, alt=""})
+  .title
+    .title__icon
+      +round(img, alt)
+    .title__text= text
