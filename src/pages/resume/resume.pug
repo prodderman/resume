@@ -51,26 +51,28 @@ html(lang="en")
             .resume__section-header
               +title({text: "contact", img: "contact.png", alt: "contacts"})
             .resume__section-content
-              .resume__contact
-                +contact({title: "Address", text: "Main Street, City."})
-              .resume__contact
-                +contact({title: "E-mail", text: "contact@domain.com", type: "email"})
-              .resume__contact
-                +contact({title: "Phone", text: "555-555-555", type: "phone"})
-              .resume__contact
-                +contact({title: "Website", text: "www.yourweb.com", type: "link"})
+              .resume__contact-container
+                .resume__contact
+                  +contact({title: "Address", text: "Main Street, City."})
+                .resume__contact
+                  +contact({title: "E-mail", text: "contact@domain.com", type: "email"})
+                .resume__contact
+                  +contact({title: "Phone", text: "555-555-555", type: "phone"})
+                .resume__contact
+                  +contact({title: "Website", text: "www.yourweb.com", type: "link"})
           section.resume__section
             .resume__section-header
               +title({text: "skills", img: "skill.png", alt: "skills"})
             .resume__section-content
-              .resume__skill
-                +skill("creative", 9)
-              .resume__skill
-                +skill("teamwork", 11)
-              .resume__skill
-                +skill("innovate", 7)
-              .resume__skill
-                +skill("communication", 11)
+              .resume__skill-container
+                .resume__skill
+                  +skill("creative", 9)
+                .resume__skill
+                  +skill("teamwork", 11)
+                .resume__skill
+                  +skill("innovate", 7)
+                .resume__skill
+                  +skill("communication", 11)
 
         +container__col-right()
           section.resume__section
