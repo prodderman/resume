@@ -1,1 +1,1 @@
-import "./software.styl";
+import './software.styl';

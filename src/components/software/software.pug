@@ -1,5 +1,11 @@
-mixin software(title, range)
-    .software
-      .software__title= title
-      .software__range
-        .software__progress(style= `width: ${range}%`)
+include ../title/title
+include ../programme/programme
+
+mixin software(items = [])
+  .software
+    .software__header
+      +title({text: "software", img: "software.png", alt: "software"})
+    .software__content
+      each item in items
+        .software__item
+          +programme({title: item.title, range: item.range})

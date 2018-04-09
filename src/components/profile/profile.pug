@@ -1,0 +1,8 @@
+include ../title/title
+
+mixin profile()
+  .profile
+    .profile__header
+      +title({text: "profile", img: "profile.png", alt: "profile"})
+    .profile__content
+      block

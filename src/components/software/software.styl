@@ -1,19 +1,19 @@
 @import '~global/vars.styl'
 
 .software
-  &__title
-    font-size 1.625rem
-    text-transform uppercase
-    color black
-    margin-bottom 0.95rem
+
+  &__header
+    margin-bottom 1.6rem
+
+  &__content
+    display flex
+    flex-wrap wrap
+    justify-content space-between
     width 100%
 
-  &__range
-    position relative
-    height 1.31rem
-    background-color $color_gray
+  &__item
+    width 45%
+    margin-bottom 1.25rem
 
-  &__progress
-    position absolute
-    height 1.31rem
-    background-color $color_blue
+  @media (max-width 480px)
+    width 100%

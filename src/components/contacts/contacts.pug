@@ -1,0 +1,11 @@
+include ../title/title
+include ../contact/contact
+
+mixin contacts(items = [])
+  .contacts
+    .contacts__header
+      +title({text: "contact", img: "contact.png", alt: "contacts"})
+    .contacts__content
+      each item in items
+        .contacts__item
+          +contact({type: item.type, title: item.title, text: item.text})
