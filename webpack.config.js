@@ -13,28 +13,8 @@ const paths = {
   dist: path.resolve(__dirname, 'dist'),
 };
 
-fs
-  .readdirSync(paths.pages)
-  .forEach((file) => {
-    pages.push(file);
-  });
-
-const htmls = pages.map(fileName => new hwp({
-  filename: `${fileName}.html`,
-  chunks: [`${fileName}`, 'common'],
-  template: `./src/pages/${fileName}/${fileName}.pug`,
-  alwaysWriteToDisk: true,
-  inject: 'body',
-  hash: true,
-}));
-
-const entries = pages.reduce((entry, fileName) => {
-  entry[fileName] = `./src/pages/${fileName}/${fileName}.js`;
-  return entry;
-}, {});
-
 module.exports = new config.default().merge({
-  entry: entries,
+  entry: `./src/pages/resume/resume.js`,
   output: {
     path: paths.dist,
     filename: "js/[name].js"
@@ -56,6 +36,14 @@ module.exports = new config.default().merge({
   plugins: [
     new CleanPlugin(['./dist']),
     new webpack.ProgressPlugin(),
+    new hwp({
+      filename: `resume.html`,
+      chunks: ['common', 'main'],
+      template: `./src/pages/resume/resume.pug`,
+      alwaysWriteToDisk: true,
+      inject: 'body',
+      hash: true,
+    }),
     new webpack.ProvidePlugin({
       $: 'jquery'
     }),
@@ -63,7 +51,7 @@ module.exports = new config.default().merge({
       name: 'common'
     }),
     new HtmlWebpackHarddiskPlugin(),
-  ].concat(htmls),
+  ],
 
 
 }).extend("webpack/webpack.[NODE_ENV].config.js");

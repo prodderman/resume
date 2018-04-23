@@ -1,7 +1,7 @@
-include ../round/round
+include ../icon/icon
 
-mixin title({text, img, alt=""})
+mixin title({text, img, alt = ""})
   .title
     .title__icon
-      +round(img, alt)
+      +icon({img: img, alt: alt})
     .title__text= text

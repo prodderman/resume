@@ -1,0 +1,8 @@
+mixin icon({img, alt = "", avatar = false})
+  -  let classes = ''
+  -  classes += avatar ? `icon_avatar` : ''
+
+  .icon(class= classes)
+    .icon__inner
+       if img
+          img.icon__img(src=require(`./img/${img}`), alt = alt)

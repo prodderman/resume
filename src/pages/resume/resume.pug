@@ -1,4 +1,3 @@
-include ../../components/layout/layout
 include ../../components/profile/profile
 include ../../components/personal/personal
 include ../../components/title/title
@@ -25,44 +24,35 @@ html(lang="en")
     meta(name="theme-color" content="#ffffff")
     title resume
   body
-    +container("resume")
-      +container__main()
-        +container__col-left()
+    .resume
+      main.resume__main
+        .resume__col-left
           .resume__personal
-            +personal("Константин", "Константинов", "graphic designer")
-          section.resume__section.resume__section_profile
+            +personal({
+              name: "Константин", 
+              surname: "Константинов", 
+              profession: "graphic designer",
+              img: "avatar.png",
+              alt: "Avatar"
+            })
+          .resume__section
             +profile()
-              p.
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-                Aenean commodo ligula eget dolor. Aenean massa. Cum sociis 
-                natoque penatibus et magnis dis parturient montes, nascetur 
-                ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, 
-                pretium quis, sem. Nulla consequat massa quis enim. Donec 
-                pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim 
-                justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam 
-                dictum felis eu <strong>pede mollis pretium. Integer tincidunt. Cras 
-                dapibus. Vivamus elementum semper nisi. Aenean 
-                vulputate eleifend tellus. Aenean leo ligula, porttitor eu, 
-                consequat vitae, eleifend ac, enim. Aliquam lorem ante, 
-                dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra 
-                nulla ut metus varius laoreet. Quisque rutrum.</strong>
-
-          section.resume__section.resume__section_contacts
+          .resume__section
             +contacts([
               {title: "Address", text: "Main Street, City."},
               {title: "E-mail", text: "contact@domain.com", type: "email"},
               {title: "Phone", text: "555-555-555", type: "phone"},
               {title: "Website", text: "www.yourweb.com", type: "link"}
             ])
-          section.resume__section.resume__section_skills
+          .resume__section.resume__section_skills
             +skills([
               {title: "creative", range: 9},
               {title: "teamwork", range: 11},
               {title: " innovate", range: 7},
               {title: "communication", range: 11}
             ])
-        +container__col-right()
-          section.resume__section.resume__section_education
+        .resume__col-right
+          .resume__section
             +education([
               {title: "master degree",
                date: "Feb 2011 - Jun 2014",
@@ -84,7 +74,7 @@ html(lang="en")
                 place: "UNIVERSITY NAME",
                 text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque."}
             ])
-          section.resume__section.resume__section_experience
+          section.resume__section
             +experience([
               {title: "COMPANY NAME",
                date: "Feb 2011 - Jun 2014",
@@ -101,7 +91,7 @@ html(lang="en")
                place: "YOUR JOB HERE",
                text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque."}
             ])
-          section.resume__section.resume__section_software
+          section.resume__section
             +software([
               {title: "photoshop", range: 90},
               {title: "dreamweawer", range: 85},

@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "better-npm-run build-test",
     "prod": "better-npm-run build-prod",
     "dev": "better-npm-run build-dev"
   },
@@ -13,13 +12,6 @@
       "env": {
         "NODE_PATH": "./src",
         "NODE_ENV": "prod"
-      }
-    },
-    "build-test": {
-      "command": "./node_modules/.bin/webpack",
-      "env": {
-        "NODE_PATH": "./src",
-        "NODE_ENV": "dev"
       }
     },
     "build-dev": {

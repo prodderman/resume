@@ -9,17 +9,7 @@ module.exports = new config.default().merge({
     pathinfo: true,
   },
   module: {
-    rules: [{
-        test: /\.js$/,
-        loader: 'babel-loader',
-        exclude: [
-          /node_modules/,
-          path.resolve(__dirname, 'src/vendors/'),
-        ],
-        query: {
-          presets: ['es2015', 'stage-0']
-        }
-      },
+    rules: [
       {
         test: /\.css/,
         use: [
@@ -62,8 +52,11 @@ module.exports = new config.default().merge({
   ],
 
   devServer: {
+    port: 8080,
     inline: true,
-    contentBase: 'dist',
-    port: process.env.PORT
+    hot: true,
+    lazy: false,
+    contentBase: "dist",
+    stats: 'errors-only'
   }
 })

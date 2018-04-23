@@ -1,10 +1,10 @@
-include ../round/round
+include ../icon/icon
 
-mixin personal(name, surname, prof, img)
+mixin personal({name, surname, profession, img, alt})
   .personal
     .personal__avatar
-      +round()
-    .personale__info
+      +icon({img: img, avatar: true, alt: alt})
+    .personal__info
       .personal__name= name
       .personal__surname= surname
       .personal__prof= prof

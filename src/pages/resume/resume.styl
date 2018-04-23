@@ -1,10 +1,41 @@
-@import '~global/vars.styl'
+@import '~global/colors.styl'
 
 .resume
+  width 100%
+
+  &__main
+    display flex
+    justify-content space-between
+    flex-wrap wrap
+    width 100%
+    max-width calc(1122px + 6.16%)
+    margin 0 auto
+    padding 4.75rem 3% 4.75rem 3.16%
+    min-width 20rem
+
+    @media (max-width 991px)
+      max-width calc(561px + 6.16%)
+      padding-top 2.3rem
+      padding-bottom 2.3rem
+
+  &__col-left
+    width 36.86%
+    margin-right 6.74%
+
+    @media (max-width 991px)
+      width 100%
+    
+
+  &__col-right
+    width 56.4%;
+
+    @media (max-width 991px) 
+      width 100%
+
   &__personal
     padding-top 0.75rem
     padding-left 0.95rem
-    margin-bottom 3.1rem
+    margin-bottom 6rem
 
     @media (max-width 991px)
       padding-left 0
