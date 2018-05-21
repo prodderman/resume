@@ -1,7 +1,7 @@
 mixin list-item({title, date, place, text, altColor = false})
   -  const classes =  altColor ? ` list-item_altcolor` : ''
 
-  .list-item(class=classes)
+  li.list-item(class=classes)
     .list-item__header
       .list-item__title= title
       .list-item__date= `${date}`

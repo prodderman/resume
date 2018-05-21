@@ -5,7 +5,7 @@ mixin education(items = [])
   .education
     .education__header
       +title({text: "education", img: "education.png", alt: "education"})
-    .education__list
+    ul.education__list
       each item in items
         .education__list-item
           +list-item({title: item.title, 

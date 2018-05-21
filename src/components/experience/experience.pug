@@ -5,7 +5,7 @@ mixin experience(items = [])
   .experience
     .experience__header
       +title({text: "experience", img: "experience.png", alt: "experience"})
-    .experience__list
+    ul.experience__list
       each item in items
         .experience__list-item
           +list-item({title: item.title, 
