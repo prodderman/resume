@@ -4,6 +4,6 @@ mixin skill({title, range = 0, count = 12})
     .skill__range
       - for(var i = 0; i < count; i++)
         if i < range
-          .skill__point.skill__point_check
+          .skill__point.skill__point_filled
         else 
           .skill__point
