@@ -1,0 +1,7 @@
+mixin info({title, date, place, text, altColor = false})
+  .info(class=altColor ? ` info_altcolor` : '')
+    .info__header
+      .info__title= title
+      .info__date= `${date}`
+      .info__place= place
+    p.info__text= text
