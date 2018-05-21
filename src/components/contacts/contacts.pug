@@ -7,5 +7,5 @@ mixin contacts(items = [])
       +title({text: "contact", img: "contact.png", alt: "contacts"})
     .contacts__content
       each item in items
-        .contacts__item
+        address.contacts__item
           +contact({type: item.type, title: item.title, text: item.text})
