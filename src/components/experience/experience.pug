@@ -1,5 +1,5 @@
 include ../title/title
-include ../list-item/list-item
+include ../info/info
 
 mixin experience(items = [])
   .experience
@@ -7,8 +7,8 @@ mixin experience(items = [])
       +title({text: "experience", img: "experience.png", alt: "experience"})
     ul.experience__list
       each item in items
-        .experience__list-item
-          +list-item({title: item.title, 
+        li.experience__list-item
+          +info({title: item.title, 
                       date: item.date, 
                       place: item.place, 
                       text: item.text,
