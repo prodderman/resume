@@ -8,4 +8,4 @@ mixin skills(items = [])
     .skills__content
       each item in items
         .skills__item
-          +skill({title: item.title, range: item.range})
+          +skill({title: item.title, range: item.range, count: item.count})
