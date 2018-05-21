@@ -14,7 +14,7 @@ const paths = {
 };
 
 module.exports = new config.default().merge({
-  entry: `./src/pages/resume/resume.js`,
+  entry: `./src/pages/resume-page/resume-page.js`,
   output: {
     path: paths.dist,
     filename: "js/[name].js"
@@ -39,7 +39,7 @@ module.exports = new config.default().merge({
     new hwp({
       filename: `resume.html`,
       chunks: ['common', 'main'],
-      template: `./src/pages/resume/resume.pug`,
+      template: `./src/pages/resume-page/resume-page.pug`,
       alwaysWriteToDisk: true,
       inject: 'body',
       hash: true,

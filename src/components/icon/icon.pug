@@ -1,7 +1,5 @@
 mixin icon({img, alt = "", avatar = false})
-  -  const classes = avatar ? `icon_avatar` : ''
-
-  .icon(class= classes)
+  .icon(class= avatar ? `icon_avatar` : '')
     .icon__inner
        if img
           img.icon__img(src=require(`./img/${img}`), alt = alt)

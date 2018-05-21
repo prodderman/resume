@@ -1,0 +1,87 @@
+include ../personal/personal
+include ../profile/profile
+include ../contacts/contacts
+include ../skills/skills
+include ../education/education
+include ../experience/experience
+include ../software/software
+
+mixin resume()
+  main.resume
+    .resume__col-left
+      .resume__personal
+        +personal({
+          name: "Константин", 
+          surname: "Константинов", 
+          profession: "graphic designer",
+          img: "avatar.png",
+          alt: "Константин Константинов"
+        })
+      section.resume__section
+        +profile({
+          spanText: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu`,
+          strongText: ` pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.`
+        })
+      section.resume__section
+        +contacts([
+          {title: "Address", text: "Main Street, City."},
+          {title: "E-mail", text: "contact@domain.com", type: "email"},
+          {title: "Phone", text: "555-555-555", type: "phone"},
+          {title: "Website", text: "www.yourweb.com", type: "link"}
+        ])
+      section.resume__section
+        +skills([
+          {title: "creative", range: 9, count: 12},
+          {title: "teamwork", range: 11, count: 12},
+          {title: "innovate", range: 7, count: 12},
+          {title: "communication", range: 11, count: 12}
+        ])
+    .resume__col-right
+      section.resume__section
+        +education([
+          {title: "master degree",
+            date: "Feb 2011 - Jun 2014",
+            place: "UNIVERSITY NAME",
+            text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque."},
+
+            {title: "master degree",
+            date: "Feb 2011 - Jun 2014",
+            place: "UNIVERSITY NAME",
+            text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque."},
+
+            {title: "master degree",
+            date: "Feb 2011 - Jun 2014",
+            place: "UNIVERSITY NAME",
+            text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque."},
+
+            {title: "master degree",
+            date: "Feb 2011 - Jun 2014",
+            place: "UNIVERSITY NAME",
+            text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque."}
+        ])
+      section.resume__section
+        +experience([
+          {title: "COMPANY NAME",
+            date: "Feb 2011 - Jun 2014",
+            place: "YOUR JOB HERE",
+            text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque."},
+
+            {title: "COMPANY NAME",
+            date: "Feb 2011 - Jun 2014",
+            place: "YOUR JOB HERE",
+            text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque."},
+
+            {title: "COMPANY NAME",
+            date: "Feb 2011 - Jun 2014",
+            place: "YOUR JOB HERE",
+            text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque."}
+        ])
+      section.resume__section
+        +software([
+          {title: "photoshop", range: 90},
+          {title: "dreamweawer", range: 85},
+          {title: "illustrator", range: 70},
+          {title: "after effects", range: 60},
+          {title: "indesign", range: 50},
+          {title: "html&css", range: 90}
+        ])

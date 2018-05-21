@@ -1,0 +1,9 @@
+include ../title/title
+
+mixin profile({spanText, strongText})
+  .profile
+    .profile__header
+      +title({text: "profile", img: "profile.png", alt: "profile"})
+    .resume__description
+      span= spanText
+      strong= strongText
