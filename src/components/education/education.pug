@@ -7,8 +7,9 @@ mixin education(items = [])
       +title({text: "education", img: "education.png", alt: "education"})
     .education__list
       each item in items
-        +list-item({title: item.title, 
-                    date: item.date, 
-                    place: item.place, 
-                    text: item.text,
-                    altColor: true})
+        .education__list-item
+          +list-item({title: item.title, 
+                      date: item.date, 
+                      place: item.place, 
+                      text: item.text,
+                      altColor: true})
