@@ -1,1 +1,0 @@
-import "./program.styl";

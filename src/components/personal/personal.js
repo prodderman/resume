@@ -1,1 +1,0 @@
-import "./personal.styl"

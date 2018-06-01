@@ -1,1 +1,0 @@
-import './software.styl';
