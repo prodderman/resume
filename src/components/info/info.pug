@@ -1,5 +1,5 @@
-mixin info({title, date, place, text, altColor = false})
-  .info(class=altColor ? ` info_altcolor` : '')
+mixin info({title, date, place, text, color})
+  .info(class= color ? ` info_color_${color}` : '')
     .info__header
       .info__title= title
       .info__date= `${date}`

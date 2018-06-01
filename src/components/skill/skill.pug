@@ -2,7 +2,7 @@ mixin skill({title, range = 0, count = 12})
   .skill
     .skill__title= title
     .skill__range
-      - for(var i = 0; i < count; i++)
+      - for(let i = 0; i < count; i+=1)
         if i < range
           .skill__point.skill__point_filled
         else 
