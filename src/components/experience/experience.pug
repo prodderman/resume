@@ -4,11 +4,8 @@ include ../info/info
 mixin experience(items = [])
   .experience
     .experience__header
-      +title({text: "experience", img: "experience.png", alt: "experience"})
+      +title({ text: 'experience', img: 'experience.png', alt: 'experience'})
     ul.experience__list
       each item in items
         li.experience__list-item
-          +info({title: item.title, 
-                      date: item.date, 
-                      place: item.place, 
-                      text: item.text})
+          +info(item)

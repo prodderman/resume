@@ -4,8 +4,8 @@ include ../skill/skill
 mixin skills(items = [])
   .skills
     .skills__header
-      +title({text: "skills", img: "skill.png", alt: "skills"})
+      +title({ text: 'skills', img: 'skill.png', alt: 'skills' })
     .skills__content
       each item in items
         .skills__item
-          +skill({title: item.title, range: item.range, count: item.count})
+          +skill(item)

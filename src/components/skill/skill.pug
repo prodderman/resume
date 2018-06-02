@@ -1,8 +1,8 @@
-mixin skill({title, range = 0, count = 12})
+mixin skill({ title, range = 0, count = 12 })
   .skill
-    .skill__title= title
+    .skill__title=title
     .skill__range
-      - for(let i = 0; i < count; i+=1)
+      - for(let i = 0; i < count; i += 1)
         if i < range
           .skill__point.skill__point_filled
         else 

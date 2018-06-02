@@ -1,7 +1,7 @@
-mixin info({title, date, place, text, color})
-  .info(class= color ? ` info_color_${color}` : '')
+mixin info({ title, date, place, text, color })
+  .info(class=color ? ` info_color_${color}` : '')
     .info__header
-      .info__title= title
-      .info__date= `${date}`
-      .info__place= place
-    p.info__text= text
+      .info__title=title
+      .info__date=`${date}`
+      .info__place=place
+    p.info__text=text

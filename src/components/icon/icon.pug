@@ -1,5 +1,5 @@
-mixin icon({img, alt = "", avatar = false})
-  .icon(class= avatar ? `icon_avatar` : '')
+mixin icon({ img, alt = '', avatar })
+  .icon(class=avatar ? `icon_avatar` : '')
     .icon__inner
        if img
-          img.icon__img(src=require(`./img/${img}`), alt = alt)
+          img.icon__img(src=require(`./img/${img}`), alt=alt)

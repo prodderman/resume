@@ -4,12 +4,8 @@ include ../info/info
 mixin education(items = [])
   .education
     .education__header
-      +title({text: "education", img: "education.png", alt: "education"})
+      +title({ text: 'education', img: 'education.png', alt: 'education' })
     ul.education__list
       each item in items
         li.education__list-item
-          +info({title: item.title, 
-                      date: item.date, 
-                      place: item.place, 
-                      text: item.text,
-                      color: 'blue'})
+          +info(Object.assign(item, { color: 'blue' }))

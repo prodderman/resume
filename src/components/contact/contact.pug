@@ -1,19 +1,19 @@
-mixin contact({type = "text", title, text})
+mixin contact({ type = 'text', title, text })
   case type
-    when "email"
-      a.contact(href= `mailto: ${text}`)
-        .contact__title= title
-        .contact__text= text
-    when "phone"
-      a.contact(href= `tel:${text}`)
-        .contact__title= title
-        .contact__text= text
-    when "link"
-      a(href= `https://${text}` target="_blank" rel="noopener noreferrer").contact
-        .contact__title= title
-        .contact__text= text
+    when 'email'
+      a.contact(href=`mailto: ${text}`)
+        .contact__title=title
+        .contact__text=text
+    when 'phone'
+      a.contact(href=`tel:${text}`)
+        .contact__title=title
+        .contact__text=text
+    when 'link'
+      a(href=`https://${text}` target="_blank" rel="noopener noreferrer").contact
+        .contact__title=title
+        .contact__text=text
     default
       .contact
-        .contact__title= title
-        .contact__text= text
+        .contact__title=title
+        .contact__text=text
     

@@ -4,8 +4,8 @@ include ../program/program
 mixin software(items = [])
   .software
     .software__header
-      +title({text: "software", img: "software.png", alt: "software"})
+      +title({ text: 'software', img: 'software.png', alt: 'software' })
     .software__content
       each item in items
         .software__item
-          +program({title: item.title, range: item.range})
+          +program(item)
