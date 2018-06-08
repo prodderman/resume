@@ -4,7 +4,7 @@ const config = require('webpack-config');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = new config.default().merge({
-  devtool: 'eval',
+  devtool: 'source-map',
   output: {
     pathinfo: true,
   },
